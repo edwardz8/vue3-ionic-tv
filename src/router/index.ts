@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import TabsPage from '../views/TabsPage.vue'
+import Post from '@/views/Post.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -26,7 +27,12 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'tab3',
         component: () => import('@/views/Tab3Page.vue')
-      }
+      },
+      {
+        path: "/posts/:slug",
+        component: Post,
+        name: 'Post'
+      },
     ]
   }
 ]
